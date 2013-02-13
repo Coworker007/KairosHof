@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <div class="jumbotron">
+      <div align='center'>
+        <h1 >Please fill the registration form</h1>
+
+        <div class="container">
+          <form  method="POST" action = "" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.firstname(class='form-control', placeholder="First Name")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.lastname(class='form-control', placeholder="Last Name")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.username(class='form-control', placeholder="Username")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.password(class='form-control', placeholder="Password")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.pass_confirm(class='form-control', placeholder="Confirm Password")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.streetname(class='form-control')  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.housenumber(class='form-control')  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.flatnumber(class='form-control')  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.telephone(class='form-control', placeholder="Telephone")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.dateofbirth(class='form-control', placeholder="dd/mm/yyyy")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.gender(class="form-control")  }}
+              </div>
+            </div>
+
+            <div class="col-auto my-1">
+              <div class="form-group col-md-4">
+                {{form.role(class="form-control")  }}
+              </div>
+            </div>
+
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+          </form>
+
+          <p><a class="btn btn-secondary" href="{{url_for('core.login')}}">Sign In instead</a></p>
+
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+{% macro render_price(model, column) %}
+  {{ model.housenumber * 2 }}
+{% endmacro %}
+{% endblock %}
